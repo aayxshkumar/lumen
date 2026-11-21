@@ -122,7 +122,7 @@ $ ./build/lumen --stats tests/programs/closures.lm
 stats: 18 calls; leaked after exit: 7 envs, 8 closures, 1 lists, 0 maps
 ```
 
-That's a real leak for long-running programs. A tracing garbage collector is on the roadmap.
+That's a real leak for long-running programs. On Linux, AddressSanitizer's leak checker reports it too, so CI runs the ASan job with `ASAN_OPTIONS=detect_leaks=0` for now. A tracing garbage collector is on the roadmap, and turning leak checks back on is part of its done check.
 
 ## Performance (Apple M4, Release, tree-walker, median of 3)
 
