@@ -1,0 +1,2 @@
+let xs = [];
+while len(xs) { }      // error: a 'while' condition must be a bool, got int 0

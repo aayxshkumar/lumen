@@ -1,0 +1,14 @@
+fn make_counter() {
+  let n = 0;
+  return fn() { n = n + 1; return n; };
+}
+let a = make_counter();
+let b = make_counter();
+a(); a();
+print(a(), b());       // expect: 3 1
+fn adder(k) { return fn(x) { return x + k; }; }
+let add5 = adder(5);
+print(add5(10));       // expect: 15
+let fs = [];
+for i in range(3) { push(fs, fn() { return i * 100; }); }
+print(fs[0](), fs[1](), fs[2]());  // expect: 0 100 200

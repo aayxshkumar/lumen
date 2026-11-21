@@ -1,0 +1,7 @@
+let db = {"users": [{"name": "ana", "age": 31}, {"name": "bo", "age": 25}]};
+let total = 0;
+for u in db["users"] { total = total + u["age"]; }
+print(total);          // expect: 56
+db["users"][1]["age"] = 26;
+print(db["users"][1]);  // expect: {"name": "bo", "age": 26}
+print(type(db), type(db["users"]), type(1.5), type("s"));  // expect: map list float string

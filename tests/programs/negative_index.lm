@@ -1,0 +1,2 @@
+let xs = [1, 2, 3];
+print(xs[-1]);         // error: index -1 out of range

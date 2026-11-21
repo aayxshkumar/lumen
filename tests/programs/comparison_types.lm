@@ -1,0 +1,1 @@
+print(1 < "2");        // error: can't compare int and string

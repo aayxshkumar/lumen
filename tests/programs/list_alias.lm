@@ -1,0 +1,8 @@
+// Lists are reference values: two names, one list.
+let a = [1, 2];
+let b = a;
+push(b, 3);
+print(a);              // expect: [1, 2, 3]
+fn add_one(xs) { push(xs, 1); }
+add_one(a);
+print(len(a));         // expect: 4

@@ -1,0 +1,3 @@
+assert(1 + 1 == 2, "math");
+print("ok");           // expect: ok
+assert(false, "custom message");  // error: assertion failed: custom message

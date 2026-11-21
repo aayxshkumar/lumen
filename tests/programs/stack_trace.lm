@@ -1,0 +1,6 @@
+fn inner(x) { return x[10]; }
+fn outer(x) { return inner(x); }
+outer([1]);
+// error: index 10 out of range
+// error: in inner called at line 2:
+// error: in outer called at line 3:

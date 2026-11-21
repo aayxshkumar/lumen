@@ -1,0 +1,4 @@
+// Output printed before a runtime error must not be lost.
+print("first");        // expect: first
+print("second");       // expect: second
+print(1 / 0);          // error: division by zero

@@ -1,0 +1,20 @@
+let total = 0;
+for i in range(10) {
+  if i % 2 == 0 { continue; }
+  if i > 7 { break; }
+  total = total + i;
+}
+print(total);          // expect: 16
+let n = 0;
+while true {
+  n = n + 1;
+  if n == 5 { break; }
+}
+print(n);              // expect: 5
+print(range(2, 11, 3), range(3, 0, -1));  // expect: [2, 5, 8] [3, 2, 1]
+let s = "";
+for c in "abc" { s = c + s; }
+print(s);              // expect: cba
+for k in ({"x": 1, "y": 2}) { print(k); }
+// expect: x
+// expect: y

@@ -1,0 +1,8 @@
+// Two closures over the same variable see each other's writes.
+fn pair() {
+  let v = 0;
+  return [fn() { v = v + 1; }, fn() { return v; }];
+}
+let p = pair();
+p[0](); p[0]();
+print(p[1]());         // expect: 2

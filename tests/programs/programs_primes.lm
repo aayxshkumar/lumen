@@ -1,0 +1,15 @@
+fn primes(limit) {
+  let sieve = [];
+  for i in range(limit + 1) { push(sieve, true); }
+  let out = [];
+  for i in range(2, limit + 1) {
+    if sieve[i] {
+      push(out, i);
+      let j = i * i;
+      while j <= limit { sieve[j] = false; j = j + i; }
+    }
+  }
+  return out;
+}
+print(primes(50));     // expect: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+print(len(primes(10000)));  // expect: 1229

@@ -1,0 +1,11 @@
+// List building, indexing and sorting.
+let xs = [];
+let seed = 12345;
+for i in range(200000) {
+  seed = (seed * 1103515245 + 12345) % 2147483648;
+  push(xs, seed % 100000);
+}
+sort(xs);
+let acc = 0;
+for i in range(0, len(xs), 1000) { acc = acc + xs[i]; }
+print(acc);

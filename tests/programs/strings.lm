@@ -1,0 +1,11 @@
+let s = "hello" + ", " + "world";
+print(s);              // expect: hello, world
+print(len(s));         // expect: 12
+print(s[0], s[11]);    // expect: h d
+print("a" < "b", "abc" < "abd", "b" < "abc");  // expect: true true false
+print("tab\there");    // expect: tab	here
+print(repr("q\"uote"));  // expect: "q\"uote"
+print(split("a,b,,c", ","));  // expect: ["a", "b", "", "c"]
+print(join([1, "x", 2.5], "-"));  // expect: 1-x-2.5
+print(str(42) + "!");  // expect: 42!
+print(int("-17") + 1);  // expect: -16

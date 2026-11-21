@@ -1,0 +1,13 @@
+let xs = [3, 1, 2];
+push(xs, 10);
+print(xs, len(xs));    // expect: [3, 1, 2, 10] 4
+xs[0] = "three";
+print(xs[0]);          // expect: three
+print(pop(xs), xs);    // expect: 10 ["three", 1, 2]
+let ys = xs + [4];
+print(len(xs), len(ys));  // expect: 3 4
+let nested = [[1, 2], [3]];
+nested[0][1] = 20;
+print(nested);         // expect: [[1, 20], [3]]
+let empty = [];
+print(empty, len(empty));  // expect: [] 0

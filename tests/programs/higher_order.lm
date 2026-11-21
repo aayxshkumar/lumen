@@ -1,0 +1,13 @@
+fn map(xs, f) { let out = []; for x in xs { push(out, f(x)); } return out; }
+fn filter(xs, f) { let out = []; for x in xs { if f(x) { push(out, x); } } return out; }
+fn reduce(xs, f, acc) { for x in xs { acc = f(acc, x); } return acc; }
+let xs = range(1, 11);
+let evens = filter(xs, fn(x) { return x % 2 == 0; });
+print(map(evens, fn(x) { return x * x; }));  // expect: [4, 16, 36, 64, 100]
+print(reduce(xs, fn(a, b) { return a + b; }, 0));  // expect: 55
+let words = ["pear", "fig", "banana", "kiwi"];
+sort(words, fn(a, b) { return len(a) < len(b); });
+print(words);          // expect: ["fig", "pear", "kiwi", "banana"]
+let ns = [3, 1.5, 2, -1];
+sort(ns);
+print(ns);             // expect: [-1, 1.5, 2, 3]

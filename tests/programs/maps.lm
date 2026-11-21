@@ -1,0 +1,11 @@
+let m = {"one": 1, "two": 2};
+m["three"] = 3;
+print(m);              // expect: {"one": 1, "two": 2, "three": 3}
+print(m["two"], len(m));  // expect: 2 3
+print(has(m, "one"), has(m, "four"));  // expect: true false
+print(del(m, "one"), del(m, "one"));   // expect: true false
+print(keys(m));        // expect: ["two", "three"]
+m["two"] = 22;
+print(m);              // expect: {"two": 22, "three": 3}
+let n = {1: "int key", true: "bool key", nil: "nil key"};
+print(n[1.0], n[true], n[nil]);  // expect: int key bool key nil key

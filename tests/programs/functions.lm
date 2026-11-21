@@ -1,0 +1,10 @@
+fn add(a, b) { return a + b; }
+print(add(2, 3));      // expect: 5
+fn nothing() { }
+print(nothing());      // expect: nil
+fn early(x) { if x { return "yes"; } return "no"; }
+print(early(true), early(false));  // expect: yes no
+let sq = fn(x) { return x * x; };
+print(sq(9));          // expect: 81
+print(add);            // expect: <fn add>
+print(type(add), type(print), type(nil));  // expect: function builtin nil

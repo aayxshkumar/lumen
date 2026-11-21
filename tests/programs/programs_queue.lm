@@ -1,0 +1,22 @@
+// Breadth-first search on a small graph, using a list as a queue.
+let graph = {"a": ["b", "c"], "b": ["d"], "c": ["d", "e"], "d": ["f"], "e": ["f"], "f": []};
+fn bfs(start, goal) {
+  let queue = [[start]];
+  let seen = {start: true};
+  let head = 0;
+  while head < len(queue) {
+    let path = queue[head];
+    head = head + 1;
+    let node = path[len(path) - 1];
+    if node == goal { return path; }
+    for next in graph[node] {
+      if not has(seen, next) {
+        seen[next] = true;
+        push(queue, path + [next]);
+      }
+    }
+  }
+  return nil;
+}
+print(bfs("a", "f"));  // expect: ["a", "b", "d", "f"]
+print(bfs("f", "a"));  // expect: nil

@@ -1,0 +1,3 @@
+// 5000 nested calls must work (the CLI runs on a big stack).
+fn depth(n) { if n == 0 { return 0; } return 1 + depth(n - 1); }
+print(depth(5000));    // expect: 5000

@@ -1,0 +1,2 @@
+// Only bools are allowed in conditions and logic: no truthiness.
+print(1 and true);     // error: 'and' needs bools, got int

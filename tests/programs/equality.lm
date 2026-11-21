@@ -1,0 +1,8 @@
+print(1 == 1.0, 1 != 2);       // expect: true true
+print([1, [2]] == [1, [2]]);   // expect: true
+print({"a": [1]} == {"a": [1]});  // expect: true
+print([1] == [1, 2]);          // expect: false
+print(nil == nil, nil == false);  // expect: true false
+print("1" == 1);               // expect: false
+let f = fn() {};
+print(f == f, fn() {} == fn() {});  // expect: true false

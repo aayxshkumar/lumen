@@ -1,0 +1,2 @@
+let m = {};
+m[[1]] = 2;            // error: a list can't be a map key

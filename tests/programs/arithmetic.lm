@@ -1,0 +1,10 @@
+// Integer division truncates toward zero; % takes the dividend's sign.
+print(7 / 2);        // expect: 3
+print(-7 / 2);       // expect: -3
+print(7 % 3);        // expect: 1
+print(-7 % 3);       // expect: -1
+print(7 % -3);       // expect: 1
+print(2 + 3 * 4 - 1);  // expect: 13
+print((2 + 3) * 4);  // expect: 20
+print(-2 * -3);      // expect: 6
+print(1_000_000 + 1);  // expect: 1000001

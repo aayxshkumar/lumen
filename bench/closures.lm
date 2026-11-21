@@ -1,0 +1,8 @@
+// Closure creation and calls.
+fn make_adder(k) { return fn(x) { return x + k; }; }
+let total = 0;
+for i in range(300000) {
+  let f = make_adder(i);
+  total = total + f(1);
+}
+print(total);

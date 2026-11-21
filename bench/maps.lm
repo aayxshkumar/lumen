@@ -1,0 +1,6 @@
+// Map inserts, lookups and string keys.
+let m = {};
+for i in range(100000) { m["k" + str(i % 5000)] = i; }
+let hits = 0;
+for i in range(200000) { if has(m, "k" + str(i % 7000)) { hits = hits + 1; } }
+print(len(m), hits);

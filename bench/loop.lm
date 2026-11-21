@@ -1,0 +1,8 @@
+// Variable lookup and integer arithmetic in a tight while loop.
+let i = 0;
+let sum = 0;
+while i < 3000000 {
+  sum = sum + i % 7;
+  i = i + 1;
+}
+print(sum);

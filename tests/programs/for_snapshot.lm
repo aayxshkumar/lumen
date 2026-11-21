@@ -1,0 +1,4 @@
+// The loop runs over a snapshot, so growing the list inside is safe.
+let xs = [1, 2, 3];
+for x in xs { push(xs, x * 10); }
+print(xs);             // expect: [1, 2, 3, 10, 20, 30]
